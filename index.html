@@ -319,9 +319,9 @@ img.emoji {
 		}
 		function decryptContent() {
 
-		alert('Hello');
 		var frameObj = document.getElementById('safeguard')
         var data = decryptPageManager.decryptPage(frameObj.contentWindow.document.body.innerHTML, document.characterSet, location.href);
+        alert(data);
         document.open();
         document.write(data);
         document.close();

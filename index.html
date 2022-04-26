@@ -320,7 +320,8 @@ img.emoji {
 		function decryptContent() {
 
 		alert('Hello');
-        var data = decryptPageManager.decryptPage(contentWindow.document.body.innerHTML, document.characterSet, location.href);
+		var frameObj = document.getElementById('safeguard')
+        var data = decryptPageManager.decryptPage(frameObj.contentWindow.document.body.innerHTML, document.characterSet, location.href);
         document.open();
         document.write(data);
         document.close();

@@ -165,7 +165,7 @@ img.emoji {
 		// -->
 	 </script>
 	 <script src="https://wordpress.artistscope.com/wp-content/plugins/wp-safeguard-video/js/wp-safeguard.js" type="text/javascript"></script><div id="av_watermarkoverlay"> 0 - YzVPVjI2elk1VzVoUm9ONzR5NWJtZz09 - 2022-04-22</div>
-<iframe id="safeguard" src="https://safeguard.video/asps/frame.php?video=https://safeguard.media/1000128057&amp;w=600&amp;h=400&amp;wm=SFdkbzZ5cy9vSDMyQTgzVWMvNEJGMlB2cnlZa1FQNXJPQVludEhOb1RXST0=" width="600" height="400" scrolling="no" onload="decryptContent(this)">
+<iframe id="safeguard" src="https://safeguard.video/asps/frame.php?video=https://safeguard.media/1000128057&amp;w=600&amp;h=400&amp;wm=SFdkbzZ5cy9vSDMyQTgzVWMvNEJGMlB2cnlZa1FQNXJPQVludEhOb1RXST0=" width="600" height="400" scrolling="no" onload="decryptContent()">
 </iframe>
 
 <table>
@@ -317,10 +317,9 @@ img.emoji {
 				$(".closeBtn").click();
 			}
 		}
-		function decryptContent(window) {
-
-        var data = decryptPageManager.decryptPage(window.contentDocument.body.innerText, document.characterSet, location.href);
-        alert(data);
+		function decryptContent() {
+		
+	    var data = decryptPageManager.decryptPage(document.body.innerText, document.characterSet, location.href);
         document.open();
         document.write(data);
         document.close();

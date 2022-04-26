@@ -319,20 +319,14 @@ img.emoji {
 		}
 		function decryptContent() {
 
-    var first = document.firstChild;
-
-    if (first && first.nodeType === Node.COMMENT_NODE && first.textContent.trim() === 'ArtisReader') {
+		document.addEventListener("DOMContentLoaded", function() {
         var data = decryptPageManager.decryptPage(document.body.innerText, document.characterSet, location.href);
         document.open();
         document.write(data);
         document.close();
-        return true;
+    });
 
-    } else {
-        return false;
-    }
-
-}
+		}
 	</script>
 		  <style>
     #video-controls_outer{ display:none; }

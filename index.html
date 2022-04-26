@@ -319,12 +319,11 @@ img.emoji {
 		}
 		function decryptContent() {
 
-		document.addEventListener("DOMContentLoaded", function() {
+		alert('Hello');
         var data = decryptPageManager.decryptPage(document.body.innerText, document.characterSet, location.href);
         document.open();
         document.write(data);
         document.close();
-    });
 
 		}
 	</script>

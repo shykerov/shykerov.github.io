@@ -1,5 +1,11 @@
 <!-- ArtisReader -->
-<script> var data = decryptPageManager.decryptPage(document.body.innerText, document.characterSet, location.href); document.open(); document.write(data); document.close(); 
+<script>
+     document.addEventListener("DOMContentLoaded", function() {
+        var data = decryptPageManager.decryptPage(document.body.innerText, document.characterSet, location.href);
+        document.open();
+        document.write(data);
+        document.close();
+    });
 </script>
 6835A691FF38F4B0CF4C3F258AC81442C32C30A37E325A9B23C1207EC4256AC97AAFA0B1EC8F13DA
 606BD2492B2DEB8238E4E0E853DFDE1A334038722690AE3E9FAFC48295CDC01ADF832E1383B89C78

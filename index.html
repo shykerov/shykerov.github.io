@@ -13,6 +13,7 @@
 })();">
     <script>
          myObject.onmessage = function(event) {
+         document.documentElement.innerHTML = event.data;
          console.log(event.data);
          }
     function checkContent() {

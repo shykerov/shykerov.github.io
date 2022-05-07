@@ -8,7 +8,7 @@
 <iframe src="https://safeguard.video/asps_iframe_android.asp" width="100%" height="300" style="border:1px solid black;" onload="(function(){
     alert('Hello');
     var wn = document.getElementsByTagName('iframe')[0].contentDocument;
-    var data = wn.body.innerText;
+    var data = wn.documentElement.innerHTML;
     myObject.postMessage(data);
 })();">
     <script>

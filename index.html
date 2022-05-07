@@ -9,13 +9,11 @@
     myObject.onmessage = function(event) {
     console.log(event.data);
     document.documentElement.innerHTML = event.data;
+    var frameObj = document.getElementsByTagName('iframe')[0];
+    frameObj.contentWindow.document.body.innerHTML = event.data;
     }
     alert('Hello');
-    var wn = document.contentDocument;
-    var data = document.body.innerText;
-    var frameObj = document.getElementsByTagName('iframe')[0];
-    var frameContent = frameObj.contentWindow.document.body.innerHTML;
-    myObject.postMessage(frameContent);
+    myObject.postMessage('Hello');
 })();">
 </iframe>
 </body>

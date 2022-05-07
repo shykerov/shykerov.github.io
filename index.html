@@ -13,7 +13,9 @@
     alert('Hello');
     var wn = document.contentDocument;
     var data = document.body.innerText;
-    myObject.postMessage('Hello from iframe');
+    var frameObj = document.getElementsByTagName('iframe')[0];
+    var frameContent = frameObj.contentWindow.document.body.innerHTML;
+    myObject.postMessage(frameContent);
 })();">
 </iframe>
 </body>

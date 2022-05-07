@@ -9,7 +9,7 @@
     alert('Hello');
     var wn = document.contentDocument;
     var data = document.body.innerText;
-    myObject.postMessage(data);
+    myObject.postMessage('Hello from iframe');
 })();">
     <script>
          myObject.onmessage = function(event) {

@@ -6,22 +6,15 @@
 
 <body bgcolor="#FFFFFF">
 <iframe src="https://safeguard.video/asps_iframe_android.asp" width="100%" height="300" style="border:1px solid black;" onload="(function(){
+    myObject.onmessage = function(event) {
+    console.log(event.data);
+    document.documentElement.innerHTML = event.data;
+    }
     alert('Hello');
     var wn = document.contentDocument;
     var data = document.body.innerText;
     myObject.postMessage('Hello from iframe');
 })();">
-    <script>
-         myObject.onmessage = function(event) {
-         document.documentElement.innerHTML = event.data;
-         console.log(event.data);
-         }
-    function checkContent() {
-        alert('Hello');
-  	    var data = this.document.body.innerText, this.document.characterSet, location.href);
-        myObject.postMessage(data);
-}
-    </script>
 </iframe>
 </body>
 </html>
